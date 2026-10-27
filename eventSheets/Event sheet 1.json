@@ -19,6 +19,14 @@
 						"x": "Player.X",
 						"y": "Player.Y"
 					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "Lives",
+					"sid": 934029561615042,
+					"parameters": {
+						"frame-number": "Player.Lives"
+					}
 				}
 			],
 			"sid": 695917871317759
@@ -39,10 +47,10 @@
 				{
 					"id": "subtract-from-instvar",
 					"objectClass": "Player",
-					"sid": 201786892272400,
+					"sid": 321043081856295,
 					"parameters": {
-						"instance-variable": "Health",
-						"value": "10"
+						"instance-variable": "Lives",
+						"value": "1"
 					}
 				},
 				{
@@ -62,9 +70,9 @@
 				{
 					"id": "every-x-seconds",
 					"objectClass": "System",
-					"sid": 559487308238165,
+					"sid": 787388321475031,
 					"parameters": {
-						"interval-seconds": "1.2"
+						"interval-seconds": "1.6"
 					}
 				},
 				{
@@ -168,6 +176,54 @@
 				}
 			],
 			"sid": 780761409841916
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 766137342184419
+				}
+			],
+			"actions": [
+				{
+					"id": "scroll-to-position",
+					"objectClass": "System",
+					"sid": 617052387168466,
+					"parameters": {
+						"x": "LayoutWidth/2",
+						"y": "LayoutHeight/2"
+					}
+				}
+			],
+			"sid": 599189756339194
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 901087080891643,
+					"parameters": {
+						"first-value": "Player.Lives",
+						"comparison": 0,
+						"second-value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 607287244724567,
+					"parameters": {
+						"layout": "Main Menu"
+					}
+				}
+			],
+			"sid": 205400284107853
 		}
 	],
 	"sid": 411087049602231

@@ -72,7 +72,8 @@
 			"Enemy1",
 			"Play",
 			"bullet",
-			"HPText"
+			"HPText",
+			"Lives"
 		],
 		"subfolders": []
 	},
