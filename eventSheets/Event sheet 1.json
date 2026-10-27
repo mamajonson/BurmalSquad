@@ -1,0 +1,174 @@
+{
+	"name": "Event sheet 1",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 197077999561817
+				}
+			],
+			"actions": [
+				{
+					"id": "set-angle-toward-position",
+					"objectClass": "Enemy1",
+					"sid": 129469691787381,
+					"parameters": {
+						"x": "Player.X",
+						"y": "Player.Y"
+					}
+				}
+			],
+			"sid": 695917871317759
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Player",
+					"sid": 416252690365400,
+					"parameters": {
+						"object": "Enemy1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "subtract-from-instvar",
+					"objectClass": "Player",
+					"sid": 201786892272400,
+					"parameters": {
+						"instance-variable": "Health",
+						"value": "10"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Enemy1",
+					"sid": 764450303649926,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 960217677433080
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 559487308238165,
+					"parameters": {
+						"interval-seconds": "1.2"
+					}
+				},
+				{
+					"id": "pick-nearestfurthest",
+					"objectClass": "Enemy1",
+					"sid": 513684679254431,
+					"parameters": {
+						"which": "nearest",
+						"x": "Player.X",
+						"y": "Player.Y",
+						"z": "0",
+						"pick-all-tied": false
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 867203038961839,
+					"parameters": {
+						"first-value": "distance(Player.X, Player.Y, enemy1.X, enemy1.Y)",
+						"comparison": 3,
+						"second-value": "600"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 501752517022911,
+					"parameters": {
+						"object-to-create": "bullet",
+						"layer": "0",
+						"x": "Player.X",
+						"y": "Player.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-angle-of-motion",
+					"objectClass": "bullet",
+					"sid": 709494454480178,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"angle": "angle(bullet.X, bullet.Y, enemy1.X, enemy1.Y)"
+					}
+				}
+			],
+			"sid": 457403637287400
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "bullet",
+					"sid": 246997756785359,
+					"parameters": {
+						"object": "Enemy1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "subtract-from-instvar",
+					"objectClass": "Enemy1",
+					"sid": 799116230336832,
+					"parameters": {
+						"instance-variable": "HP",
+						"value": "1"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "bullet",
+					"sid": 283402666016129
+				}
+			],
+			"sid": 382513007874459
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "Enemy1",
+					"sid": 401715496150924,
+					"parameters": {
+						"instance-variable": "HP",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Enemy1",
+					"sid": 125057554671131
+				}
+			],
+			"sid": 780761409841916
+		}
+	],
+	"sid": 411087049602231
+}

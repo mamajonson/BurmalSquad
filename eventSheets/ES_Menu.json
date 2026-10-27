@@ -1,0 +1,27 @@
+{
+	"name": "ES_Menu",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "Play",
+					"sid": 449909069762690
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 146048406327005,
+					"parameters": {
+						"layout": "Arena"
+					}
+				}
+			],
+			"sid": 511110349062727
+		}
+	],
+	"sid": 941710272311924
+}
