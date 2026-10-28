@@ -6,13 +6,6 @@
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [
 		{
-			"name": "MiniWave",
-			"type": "number",
-			"desc": "",
-			"show": true,
-			"sid": 663242295448573
-		},
-		{
 			"name": "EnemiesToSpawn",
 			"type": "number",
 			"desc": "",

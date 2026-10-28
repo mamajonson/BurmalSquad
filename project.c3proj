@@ -21,20 +21,6 @@
 			"bundled": false
 		},
 		{
-			"type": "plugin",
-			"id": "Text",
-			"name": "Text",
-			"author": "Scirra",
-			"bundled": false
-		},
-		{
-			"type": "plugin",
-			"id": "TiledBg",
-			"name": "Tiled Background",
-			"author": "Scirra",
-			"bundled": false
-		},
-		{
 			"type": "behavior",
 			"id": "Bullet",
 			"name": "Bullet",
@@ -54,35 +40,21 @@
 			"name": "Scroll To",
 			"author": "Scirra",
 			"bundled": false
-		},
-		{
-			"type": "behavior",
-			"id": "solid",
-			"name": "Solid",
-			"author": "Scirra",
-			"bundled": false
 		}
 	],
 	"uniqueId": "kdhvi0vurn6",
 	"objectTypes": {
 		"items": [
 			"Player",
-			"TiledArena",
-			"TiledWall",
 			"Enemy1",
 			"Play",
 			"bullet",
 			"Lives",
 			"WaveManager",
 			"SpawnZone",
-			"GameOverWindow",
-			"GameOverText",
-			"RestartButton",
-			"RestartButton2",
-			"Text",
 			"MoneyIcon",
 			"CandyIcon",
-			"Sprite"
+			"Arena"
 		],
 		"subfolders": []
 	},
@@ -271,7 +243,7 @@
 		"exportFileStructure": "folders",
 		"scriptsType": "module"
 	},
-	"viewportWidth": 1280,
-	"viewportHeight": 960,
+	"viewportWidth": 1920,
+	"viewportHeight": 1080,
 	"firstLayout": "Main Menu"
 }

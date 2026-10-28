@@ -90,11 +90,11 @@
 				{
 					"id": "compare-two-values",
 					"objectClass": "System",
-					"sid": 330553402478084,
+					"sid": 383146090910224,
 					"parameters": {
 						"first-value": "distance(Player.X, Player.Y, enemy1.X, enemy1.Y)",
 						"comparison": 3,
-						"second-value": "500"
+						"second-value": "600"
 					}
 				}
 			],
