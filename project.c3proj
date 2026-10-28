@@ -9,56 +9,56 @@
 		{
 			"type": "plugin",
 			"id": "Button",
-			"name": "Кнопка",
+			"name": "Button",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
 			"id": "Sprite",
-			"name": "Спрайт",
+			"name": "Sprite",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
 			"id": "Text",
-			"name": "Текст",
+			"name": "Text",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
 			"id": "TiledBg",
-			"name": "Тайловый фон",
+			"name": "Tiled Background",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "Bullet",
-			"name": "Пуля",
+			"name": "Bullet",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "EightDir",
-			"name": "8 Направлений",
+			"name": "8 Direction",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "scrollto",
-			"name": "Следить за",
+			"name": "Scroll To",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "solid",
-			"name": "Твёрдый",
+			"name": "Solid",
 			"author": "Scirra",
 			"bundled": false
 		}
@@ -75,7 +75,8 @@
 			"HPText",
 			"Lives",
 			"WaveManager",
-			"SpawnZone"
+			"SpawnZone",
+			"KilledEnemyText"
 		],
 		"subfolders": []
 	},

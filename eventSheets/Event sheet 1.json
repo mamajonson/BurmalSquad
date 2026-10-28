@@ -70,9 +70,9 @@
 				{
 					"id": "every-x-seconds",
 					"objectClass": "System",
-					"sid": 787388321475031,
+					"sid": 133106506747084,
 					"parameters": {
-						"interval-seconds": "1.6"
+						"interval-seconds": "1.1"
 					}
 				},
 				{
@@ -90,11 +90,11 @@
 				{
 					"id": "compare-two-values",
 					"objectClass": "System",
-					"sid": 867203038961839,
+					"sid": 330553402478084,
 					"parameters": {
 						"first-value": "distance(Player.X, Player.Y, enemy1.X, enemy1.Y)",
 						"comparison": 3,
-						"second-value": "600"
+						"second-value": "500"
 					}
 				}
 			],
@@ -231,9 +231,9 @@
 				{
 					"id": "every-x-seconds",
 					"objectClass": "System",
-					"sid": 246545588019391,
+					"sid": 674189343168728,
 					"parameters": {
-						"interval-seconds": "1.0"
+						"interval-seconds": "1.3"
 					}
 				},
 				{
@@ -245,10 +245,100 @@
 						"comparison": 4,
 						"value": "0"
 					}
+				},
+				{
+					"id": "compare-child-count",
+					"objectClass": "Enemy1",
+					"sid": 884432509716277,
+					"parameters": {
+						"which": "all",
+						"comparison": 2,
+						"count": "50"
+					}
 				}
 			],
 			"actions": [],
-			"sid": 275525295614320
+			"sid": 275525295614320,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "SpawnZone",
+							"sid": 694116704434472,
+							"parameters": {
+								"instance-variable": "SideIndex",
+								"comparison": 0,
+								"value": "WaveManager.NextSide"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 474929193909506,
+							"parameters": {
+								"object-to-create": "Enemy1",
+								"layer": "0",
+								"x": "random(SpawnZone.BBoxLeft, SpawnZone.BBoxRight)",
+								"y": "random(SpawnZone.BBoxTop, SpawnZone.BBoxBottom)",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "subtract-from-instvar",
+							"objectClass": "WaveManager",
+							"sid": 672387548424944,
+							"parameters": {
+								"instance-variable": "EnemiesToSpawn",
+								"value": "1"
+							}
+						},
+						{
+							"id": "add-to-instvar",
+							"objectClass": "WaveManager",
+							"sid": 769882062068710,
+							"parameters": {
+								"instance-variable": "NextSide",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 675858548747924,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 747107721506408,
+									"parameters": {
+										"first-value": "WaveManager.NextSide",
+										"comparison": 0,
+										"second-value": "4"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "WaveManager",
+									"sid": 649477365004865,
+									"parameters": {
+										"instance-variable": "NextSide",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 740119517340428
+						}
+					]
+				}
+			]
 		}
 	],
 	"sid": 411087049602231

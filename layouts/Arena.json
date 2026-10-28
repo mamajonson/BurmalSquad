@@ -68,7 +68,7 @@
 					"behaviors": {
 						"8Direction": {
 							"properties": {
-								"max-speed": 190,
+								"max-speed": 220,
 								"acceleration": 600,
 								"deceleration": 1000,
 								"directions": "dir-8",
@@ -376,7 +376,7 @@
 					"behaviors": {
 						"Bullet": {
 							"properties": {
-								"speed": 100,
+								"speed": 150,
 								"acceleration": 0,
 								"gravity": 0,
 								"bounce-off-solids": false,
@@ -390,8 +390,152 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 4744,
-						"y": 1054,
+						"x": 2661,
+						"y": 2286,
+						"width": 45,
+						"height": 42,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
+				},
+				{
+					"type": "Enemy1",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Default",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 12,
+					"sid": 230299170128587,
+					"tags": "",
+					"instanceVariables": {
+						"HP": 1
+					},
+					"behaviors": {
+						"Bullet": {
+							"properties": {
+								"speed": 150,
+								"acceleration": 0,
+								"gravity": 0,
+								"bounce-off-solids": false,
+								"set-angle": true,
+								"step": false,
+								"enabled": true
+							}
+						}
+					},
+					"materialSurfaceType": "smooth",
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 2599,
+						"y": 984,
+						"width": 45,
+						"height": 42,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
+				},
+				{
+					"type": "Enemy1",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Default",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 13,
+					"sid": 191924481720545,
+					"tags": "",
+					"instanceVariables": {
+						"HP": 1
+					},
+					"behaviors": {
+						"Bullet": {
+							"properties": {
+								"speed": 150,
+								"acceleration": 0,
+								"gravity": 0,
+								"bounce-off-solids": false,
+								"set-angle": true,
+								"step": false,
+								"enabled": true
+							}
+						}
+					},
+					"materialSurfaceType": "smooth",
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 874,
+						"y": 1527,
+						"width": 45,
+						"height": 42,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
+				},
+				{
+					"type": "Enemy1",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Default",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 14,
+					"sid": 595210318497458,
+					"tags": "",
+					"instanceVariables": {
+						"HP": 1
+					},
+					"behaviors": {
+						"Bullet": {
+							"properties": {
+								"speed": 150,
+								"acceleration": 0,
+								"gravity": 0,
+								"bounce-off-solids": false,
+								"set-angle": true,
+								"step": false,
+								"enabled": true
+							}
+						}
+					},
+					"materialSurfaceType": "smooth",
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 2279,
+						"y": 2720,
 						"width": 45,
 						"height": 42,
 						"originX": 0.5,
@@ -540,7 +684,7 @@
 					"tags": "",
 					"instanceVariables": {
 						"MiniWave": 1,
-						"EnemiesToSpawn": 0,
+						"EnemiesToSpawn": 30,
 						"WaveActive": true,
 						"LevelComplete": 0,
 						"NextSide": 0
@@ -588,7 +732,7 @@
 					"world": {
 						"x": 1995.5,
 						"y": -18,
-						"width": 4007,
+						"width": 4006.9999999999995,
 						"height": 250,
 						"originX": 0.5,
 						"originY": 0.5,
@@ -708,6 +852,56 @@
 						],
 						"z": 0,
 						"angle": 4.71238898038469
+					}
+				},
+				{
+					"type": "KilledEnemyText",
+					"properties": {
+						"text": "Побежденных врагов:",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 24,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "right",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 15,
+					"sid": 833083596423877,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"materialSurfaceType": "smooth",
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 992,
+						"y": 25,
+						"width": 261,
+						"height": 99,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
 					}
 				}
 			],
