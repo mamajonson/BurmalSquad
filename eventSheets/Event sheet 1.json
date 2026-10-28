@@ -224,6 +224,31 @@
 				}
 			],
 			"sid": 205400284107853
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 246545588019391,
+					"parameters": {
+						"interval-seconds": "1.0"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "WaveManager",
+					"sid": 101765189261674,
+					"parameters": {
+						"instance-variable": "EnemiesToSpawn",
+						"comparison": 4,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 275525295614320
 		}
 	],
 	"sid": 411087049602231
