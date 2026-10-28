@@ -1,7 +1,7 @@
 {
-	"name": "HPText",
+	"name": "GameOverText",
 	"plugin-id": "Text",
-	"sid": 559256449752314,
+	"sid": 745062031905544,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],

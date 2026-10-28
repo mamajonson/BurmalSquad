@@ -12,12 +12,12 @@
 			],
 			"actions": [
 				{
-					"id": "set-angle-toward-position",
+					"id": "set-angle-of-motion",
 					"objectClass": "Enemy1",
-					"sid": 129469691787381,
+					"sid": 210567514456529,
+					"behaviorType": "Bullet",
 					"parameters": {
-						"x": "Player.X",
-						"y": "Player.Y"
+						"angle": "angle(Enemy1.X, Enemy1.Y, Player.X, Player.Y)"
 					}
 				},
 				{
@@ -70,9 +70,9 @@
 				{
 					"id": "every-x-seconds",
 					"objectClass": "System",
-					"sid": 133106506747084,
+					"sid": 587338272780963,
 					"parameters": {
-						"interval-seconds": "1.1"
+						"interval-seconds": "1.4"
 					}
 				},
 				{

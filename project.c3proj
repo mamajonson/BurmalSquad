@@ -72,11 +72,17 @@
 			"Enemy1",
 			"Play",
 			"bullet",
-			"HPText",
 			"Lives",
 			"WaveManager",
 			"SpawnZone",
-			"KilledEnemyText"
+			"GameOverWindow",
+			"GameOverText",
+			"RestartButton",
+			"RestartButton2",
+			"Text",
+			"MoneyIcon",
+			"CandyIcon",
+			"Sprite"
 		],
 		"subfolders": []
 	},

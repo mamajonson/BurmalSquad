@@ -1,7 +1,7 @@
 {
-	"name": "KilledEnemyText",
+	"name": "Text",
 	"plugin-id": "Text",
-	"sid": 545708533170412,
+	"sid": 123111500024335,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
