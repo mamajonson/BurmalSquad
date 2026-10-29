@@ -40,6 +40,13 @@
 			"name": "Scroll To",
 			"author": "Scirra",
 			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "solid",
+			"name": "Solid",
+			"author": "Scirra",
+			"bundled": false
 		}
 	],
 	"uniqueId": "kdhvi0vurn6",
@@ -50,11 +57,12 @@
 			"Play",
 			"bullet",
 			"Lives",
-			"WaveManager",
+			"SpawnManager",
 			"SpawnZone",
 			"MoneyIcon",
 			"CandyIcon",
-			"Arena"
+			"Arena",
+			"Wall"
 		],
 		"subfolders": []
 	},

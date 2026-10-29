@@ -238,7 +238,7 @@
 				},
 				{
 					"id": "compare-instance-variable",
-					"objectClass": "WaveManager",
+					"objectClass": "SpawnManager",
 					"sid": 101765189261674,
 					"parameters": {
 						"instance-variable": "EnemiesToSpawn",
@@ -270,7 +270,7 @@
 							"parameters": {
 								"instance-variable": "SideIndex",
 								"comparison": 0,
-								"value": "WaveManager.NextSide"
+								"value": "SpawnManager.NextSide"
 							}
 						}
 					],
@@ -290,7 +290,7 @@
 						},
 						{
 							"id": "subtract-from-instvar",
-							"objectClass": "WaveManager",
+							"objectClass": "SpawnManager",
 							"sid": 672387548424944,
 							"parameters": {
 								"instance-variable": "EnemiesToSpawn",
@@ -299,7 +299,7 @@
 						},
 						{
 							"id": "add-to-instvar",
-							"objectClass": "WaveManager",
+							"objectClass": "SpawnManager",
 							"sid": 769882062068710,
 							"parameters": {
 								"instance-variable": "NextSide",
@@ -317,7 +317,7 @@
 									"objectClass": "System",
 									"sid": 747107721506408,
 									"parameters": {
-										"first-value": "WaveManager.NextSide",
+										"first-value": "SpawnManager.NextSide",
 										"comparison": 0,
 										"second-value": "4"
 									}
@@ -326,7 +326,7 @@
 							"actions": [
 								{
 									"id": "set-instvar-value",
-									"objectClass": "WaveManager",
+									"objectClass": "SpawnManager",
 									"sid": 649477365004865,
 									"parameters": {
 										"instance-variable": "NextSide",
