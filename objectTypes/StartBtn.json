@@ -1,7 +1,7 @@
 {
-	"name": "Sprite",
+	"name": "StartBtn",
 	"plugin-id": "Sprite",
-	"sid": 972119408345093,
+	"sid": 504554466016704,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
@@ -12,21 +12,33 @@
 			{
 				"frames": [
 					{
-						"width": 250,
-						"height": 250,
+						"width": 1357,
+						"height": 431,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 7925340,
+						"imageSpriteId": 4943544,
+						"collisionPoly": {
+							"points": [
+								0.14591009579955785,
+								0,
+								0.8953574060427414,
+								0.027842227378190254,
+								0.8540899042004422,
+								1,
+								0.10464259395725865,
+								0.9721577726218097
+							]
+						},
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 685506868124600,
+				"sid": 715571467107200,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

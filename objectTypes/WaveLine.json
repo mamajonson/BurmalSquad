@@ -1,0 +1,23 @@
+{
+	"name": "WaveLine",
+	"plugin-id": "NinePatch",
+	"sid": 908535114533417,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"image": {
+		"width": 500,
+		"height": 30,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"fileType": "image/png",
+		"imageSpriteId": 7946666,
+		"useCollisionPoly": true,
+		"tag": ""
+	}
+}

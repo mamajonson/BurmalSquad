@@ -21,16 +21,8 @@
 					}
 				},
 				{
-					"id": "set-width",
-					"objectClass": "WaveLineMain",
-					"sid": 113968561015677,
-					"parameters": {
-						"width": "0"
-					}
-				},
-				{
 					"id": "set-visible",
-					"objectClass": "Sprite2",
+					"objectClass": "ResultBg",
 					"sid": 878018119358281,
 					"parameters": {
 						"visibility": "invisible"
@@ -38,7 +30,7 @@
 				},
 				{
 					"id": "set-visible",
-					"objectClass": "Sprite3",
+					"objectClass": "ToMenuButton",
 					"sid": 104173582683148,
 					"parameters": {
 						"visibility": "invisible"
@@ -46,7 +38,7 @@
 				},
 				{
 					"id": "set-visible",
-					"objectClass": "Text2",
+					"objectClass": "LevelUpText",
 					"sid": 343733108259844,
 					"parameters": {
 						"visibility": "invisible"
@@ -54,7 +46,7 @@
 				},
 				{
 					"id": "set-visible",
-					"objectClass": "Text3",
+					"objectClass": "ToMenuText",
 					"sid": 636616612932640,
 					"parameters": {
 						"visibility": "invisible"
@@ -92,8 +84,8 @@
 				},
 				{
 					"id": "set-width",
-					"objectClass": "WaveLineMain",
-					"sid": 143212565742553,
+					"objectClass": "WaveLine",
+					"sid": 220918799545269,
 					"parameters": {
 						"width": "Player.KilledEnemies*(WaweLineBack.Width/SpawnManager.EnemiesToSpawn)"
 					}
@@ -419,7 +411,7 @@
 				},
 				{
 					"id": "set-visible",
-					"objectClass": "Sprite2",
+					"objectClass": "ResultBg",
 					"sid": 533943259728962,
 					"parameters": {
 						"visibility": "visible"
@@ -427,7 +419,7 @@
 				},
 				{
 					"id": "set-visible",
-					"objectClass": "Sprite3",
+					"objectClass": "ToMenuButton",
 					"sid": 986994690742765,
 					"parameters": {
 						"visibility": "visible"
@@ -435,7 +427,7 @@
 				},
 				{
 					"id": "set-visible",
-					"objectClass": "Text2",
+					"objectClass": "LevelUpText",
 					"sid": 541504495245731,
 					"parameters": {
 						"visibility": "visible"
@@ -443,7 +435,7 @@
 				},
 				{
 					"id": "set-visible",
-					"objectClass": "Text3",
+					"objectClass": "ToMenuText",
 					"sid": 394694876339772,
 					"parameters": {
 						"visibility": "visible"
@@ -468,7 +460,7 @@
 					"objectClass": "Touch",
 					"sid": 682919243572940,
 					"parameters": {
-						"object": "Sprite3",
+						"object": "ToMenuButton",
 						"type": "start"
 					}
 				}

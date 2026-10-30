@@ -5,22 +5,26 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-clicked",
-					"objectClass": "Play",
-					"sid": 449909069762690
+					"id": "on-touched-object",
+					"objectClass": "Touch",
+					"sid": 318265613045512,
+					"parameters": {
+						"object": "StartBtn",
+						"type": "start"
+					}
 				}
 			],
 			"actions": [
 				{
 					"id": "go-to-layout",
 					"objectClass": "System",
-					"sid": 146048406327005,
+					"sid": 861940298380005,
 					"parameters": {
 						"layout": "Arena"
 					}
 				}
 			],
-			"sid": 511110349062727
+			"sid": 718967115553321
 		}
 	],
 	"sid": 941710272311924
