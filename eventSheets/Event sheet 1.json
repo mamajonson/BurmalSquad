@@ -27,6 +27,38 @@
 					"parameters": {
 						"width": "0"
 					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Sprite2",
+					"sid": 878018119358281,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Sprite3",
+					"sid": 104173582683148,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Text2",
+					"sid": 343733108259844,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Text3",
+					"sid": 636616612932640,
+					"parameters": {
+						"visibility": "invisible"
+					}
 				}
 			],
 			"sid": 657768115449599
@@ -360,6 +392,106 @@
 					"sid": 531771921240231
 				}
 			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 849972876459132,
+					"parameters": {
+						"first-value": "Player.KilledEnemies",
+						"comparison": 0,
+						"second-value": "SpawnManager.EnemiesToSpawn"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 891182492447206,
+					"parameters": {
+						"seconds": "1.0",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Sprite2",
+					"sid": 533943259728962,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Sprite3",
+					"sid": 986994690742765,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Text2",
+					"sid": 541504495245731,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Text3",
+					"sid": 394694876339772,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-time-scale",
+					"objectClass": "System",
+					"sid": 565646515428670,
+					"parameters": {
+						"time-scale": "0"
+					}
+				}
+			],
+			"sid": 434450138119113
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-touched-object",
+					"objectClass": "Touch",
+					"sid": 682919243572940,
+					"parameters": {
+						"object": "Sprite3",
+						"type": "start"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 454628943245161,
+					"parameters": {
+						"layout": "Main Menu"
+					}
+				},
+				{
+					"id": "set-time-scale",
+					"objectClass": "System",
+					"sid": 276297539949142,
+					"parameters": {
+						"time-scale": "1.0"
+					}
+				}
+			],
+			"sid": 779922105571712
 		}
 	],
 	"sid": 411087049602231

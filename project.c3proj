@@ -15,13 +15,6 @@
 		},
 		{
 			"type": "plugin",
-			"id": "NinePatch",
-			"name": "9-patch",
-			"author": "Scirra",
-			"bundled": false
-		},
-		{
-			"type": "plugin",
 			"id": "Sprite",
 			"name": "Sprite",
 			"author": "Scirra",
@@ -29,8 +22,15 @@
 		},
 		{
 			"type": "plugin",
-			"id": "progressbar",
-			"name": "Progress bar",
+			"id": "Text",
+			"name": "Text",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Touch",
+			"name": "Touch",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -86,9 +86,13 @@
 			"Wall",
 			"WaweLineBack",
 			"WaveLineMain",
-			"ProgressBar",
-			"9patch",
-			"9patch2"
+			"Text",
+			"Sprite",
+			"Sprite2",
+			"Text2",
+			"Sprite3",
+			"Text3",
+			"Touch"
 		],
 		"subfolders": []
 	},
