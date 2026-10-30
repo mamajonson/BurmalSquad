@@ -13,25 +13,18 @@
 			"sid": 225363499491397
 		},
 		{
-			"name": "WaveActive",
-			"type": "boolean",
-			"desc": "",
-			"show": true,
-			"sid": 327511019108718
-		},
-		{
-			"name": "LevelComplete",
-			"type": "number",
-			"desc": "",
-			"show": true,
-			"sid": 220941532536064
-		},
-		{
 			"name": "NextSide",
 			"type": "number",
 			"desc": "",
 			"show": true,
 			"sid": 933006816295317
+		},
+		{
+			"name": "SpawnedCount",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 921438224853852
 		}
 	],
 	"behaviorTypes": [],

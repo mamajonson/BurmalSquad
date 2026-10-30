@@ -5,6 +5,36 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 655942546433409
+				}
+			],
+			"actions": [
+				{
+					"id": "scroll-to-position",
+					"objectClass": "System",
+					"sid": 106374156448068,
+					"parameters": {
+						"x": "LayoutWidth/2",
+						"y": "LayoutHeight/2"
+					}
+				},
+				{
+					"id": "set-width",
+					"objectClass": "WaveLineMain",
+					"sid": 113968561015677,
+					"parameters": {
+						"width": "0"
+					}
+				}
+			],
+			"sid": 657768115449599
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
 					"id": "every-tick",
 					"objectClass": "System",
 					"sid": 197077999561817
@@ -26,6 +56,14 @@
 					"sid": 934029561615042,
 					"parameters": {
 						"frame-number": "Player.Lives"
+					}
+				},
+				{
+					"id": "set-width",
+					"objectClass": "WaveLineMain",
+					"sid": 143212565742553,
+					"parameters": {
+						"width": "Player.KilledEnemies*(WaweLineBack.Width/SpawnManager.EnemiesToSpawn)"
 					}
 				}
 			],
@@ -70,9 +108,9 @@
 				{
 					"id": "every-x-seconds",
 					"objectClass": "System",
-					"sid": 587338272780963,
+					"sid": 542765082381731,
 					"parameters": {
-						"interval-seconds": "1.4"
+						"interval-seconds": "1.1"
 					}
 				},
 				{
@@ -150,6 +188,15 @@
 					"id": "destroy",
 					"objectClass": "bullet",
 					"sid": 283402666016129
+				},
+				{
+					"id": "add-to-instvar",
+					"objectClass": "Player",
+					"sid": 890123554554691,
+					"parameters": {
+						"instance-variable": "KilledEnemies",
+						"value": "1"
+					}
 				}
 			],
 			"sid": 382513007874459
@@ -176,28 +223,6 @@
 				}
 			],
 			"sid": 780761409841916
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-start-of-layout",
-					"objectClass": "System",
-					"sid": 766137342184419
-				}
-			],
-			"actions": [
-				{
-					"id": "scroll-to-position",
-					"objectClass": "System",
-					"sid": 617052387168466,
-					"parameters": {
-						"x": "LayoutWidth/2",
-						"y": "LayoutHeight/2"
-					}
-				}
-			],
-			"sid": 599189756339194
 		},
 		{
 			"eventType": "block",
@@ -231,34 +256,24 @@
 				{
 					"id": "every-x-seconds",
 					"objectClass": "System",
-					"sid": 674189343168728,
+					"sid": 601815702643031,
 					"parameters": {
-						"interval-seconds": "1.3"
+						"interval-seconds": "1.0"
 					}
 				},
 				{
-					"id": "compare-instance-variable",
-					"objectClass": "SpawnManager",
-					"sid": 101765189261674,
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 473166498729699,
 					"parameters": {
-						"instance-variable": "EnemiesToSpawn",
-						"comparison": 4,
-						"value": "0"
-					}
-				},
-				{
-					"id": "compare-child-count",
-					"objectClass": "Enemy1",
-					"sid": 884432509716277,
-					"parameters": {
-						"which": "all",
+						"first-value": "SpawnManager.SpawnedCount",
 						"comparison": 2,
-						"count": "50"
+						"second-value": "SpawnManager.EnemiesToSpawn"
 					}
 				}
 			],
 			"actions": [],
-			"sid": 275525295614320,
+			"sid": 220167538275992,
 			"children": [
 				{
 					"eventType": "block",
@@ -266,7 +281,7 @@
 						{
 							"id": "compare-instance-variable",
 							"objectClass": "SpawnZone",
-							"sid": 694116704434472,
+							"sid": 871769379796201,
 							"parameters": {
 								"instance-variable": "SideIndex",
 								"comparison": 0,
@@ -276,9 +291,18 @@
 					],
 					"actions": [
 						{
+							"id": "add-to-instvar",
+							"objectClass": "SpawnManager",
+							"sid": 483447173099979,
+							"parameters": {
+								"instance-variable": "SpawnedCount",
+								"value": "1"
+							}
+						},
+						{
 							"id": "create-object",
 							"objectClass": "System",
-							"sid": 474929193909506,
+							"sid": 904664309123947,
 							"parameters": {
 								"object-to-create": "Enemy1",
 								"layer": "0",
@@ -289,25 +313,16 @@
 							}
 						},
 						{
-							"id": "subtract-from-instvar",
-							"objectClass": "SpawnManager",
-							"sid": 672387548424944,
-							"parameters": {
-								"instance-variable": "EnemiesToSpawn",
-								"value": "1"
-							}
-						},
-						{
 							"id": "add-to-instvar",
 							"objectClass": "SpawnManager",
-							"sid": 769882062068710,
+							"sid": 583576170031739,
 							"parameters": {
 								"instance-variable": "NextSide",
 								"value": "1"
 							}
 						}
 					],
-					"sid": 675858548747924,
+					"sid": 180658726744525,
 					"children": [
 						{
 							"eventType": "block",
@@ -315,7 +330,7 @@
 								{
 									"id": "compare-two-values",
 									"objectClass": "System",
-									"sid": 747107721506408,
+									"sid": 822255018188779,
 									"parameters": {
 										"first-value": "SpawnManager.NextSide",
 										"comparison": 0,
@@ -327,16 +342,22 @@
 								{
 									"id": "set-instvar-value",
 									"objectClass": "SpawnManager",
-									"sid": 649477365004865,
+									"sid": 336181407354396,
 									"parameters": {
 										"instance-variable": "NextSide",
 										"value": "0"
 									}
 								}
 							],
-							"sid": 740119517340428
+							"sid": 439456164263178
 						}
 					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [],
+					"sid": 531771921240231
 				}
 			]
 		}

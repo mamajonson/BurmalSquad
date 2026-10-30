@@ -11,6 +11,13 @@
 			"desc": "",
 			"show": true,
 			"sid": 833140706637125
+		},
+		{
+			"name": "KilledEnemies",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 635456942984004
 		}
 	],
 	"behaviorTypes": [
