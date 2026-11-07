@@ -71,6 +71,13 @@
 		},
 		{
 			"type": "behavior",
+			"id": "Fade",
+			"name": "Fade",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "scrollto",
 			"name": "Scroll To",
 			"author": "Scirra",
@@ -113,7 +120,9 @@
 			"GameLoader",
 			"GameData",
 			"NextWaveButton",
-			"NexWaveText"
+			"NexWaveText",
+			"BlackScreen",
+			"IntroText"
 		],
 		"subfolders": []
 	},

@@ -118,6 +118,14 @@
 						"instance-variable": "SpawnInterval",
 						"value": "GameData.Get(\"waves.\" & CurrentWave & \".spawnInterval\")"
 					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "IntroText",
+					"sid": 437019697119800,
+					"parameters": {
+						"text": "\"Волна \" & GameData.Get(\"waves.\" & CurrentWave & \".id\")"
+					}
 				}
 			],
 			"sid": 657768115449599
@@ -200,6 +208,36 @@
 				}
 			],
 			"sid": 960217677433080
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Player",
+					"sid": 143076479799788,
+					"parameters": {
+						"object": "Coin"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-instvar",
+					"objectClass": "Player",
+					"sid": 922785346552630,
+					"parameters": {
+						"instance-variable": "Coins",
+						"value": "1"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Coin",
+					"sid": 951684174858916
+				}
+			],
+			"sid": 263984520957301
 		},
 		{
 			"eventType": "block",
@@ -357,6 +395,15 @@
 					"sid": 978055096824186,
 					"parameters": {
 						"variable": "CurrentWave",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 302502619299211,
+					"parameters": {
+						"variable": "GlobalCoins",
 						"value": "0"
 					}
 				},
@@ -529,12 +576,54 @@
 			],
 			"actions": [
 				{
+					"id": "destroy",
+					"objectClass": "bullet",
+					"sid": 213968822249459
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Enemy1",
+					"sid": 442534086940870
+				},
+				{
 					"id": "add-to-eventvar",
 					"objectClass": "System",
 					"sid": 971424983845934,
 					"parameters": {
 						"variable": "CurrentWave",
 						"value": "1"
+					}
+				},
+				{
+					"id": "add-to-instvar",
+					"objectClass": "Player",
+					"sid": 557733255056985,
+					"parameters": {
+						"instance-variable": "Coins",
+						"value": "Coin.Count"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Coin",
+					"sid": 801056277787110
+				},
+				{
+					"id": "subtract-from-instvar",
+					"objectClass": "Player",
+					"sid": 590145849990778,
+					"parameters": {
+						"instance-variable": "Coins",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 876643850419820,
+					"parameters": {
+						"variable": "GlobalCoins",
+						"value": "Player.Coins"
 					}
 				},
 				{
@@ -546,45 +635,12 @@
 					}
 				},
 				{
-					"id": "add-to-instvar",
-					"objectClass": "Player",
-					"sid": 858326141221150,
-					"parameters": {
-						"instance-variable": "Coins",
-						"value": "Coin.Count - 1"
-					}
-				},
-				{
-					"id": "destroy",
-					"objectClass": "Coin",
-					"sid": 999042183467360
-				},
-				{
-					"id": "destroy",
-					"objectClass": "bullet",
-					"sid": 371205722865865
-				},
-				{
-					"id": "destroy",
-					"objectClass": "Enemy1",
-					"sid": 696852869847531
-				},
-				{
 					"id": "wait",
 					"objectClass": "System",
 					"sid": 441495264666001,
 					"parameters": {
 						"seconds": "2.0",
 						"use-timescale": false
-					}
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 307448167646504,
-					"parameters": {
-						"variable": "GlobalCoins",
-						"value": "Player.Coins"
 					}
 				}
 			],
@@ -767,36 +823,6 @@
 				}
 			],
 			"sid": 977243687518565
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-collision-with-another-object",
-					"objectClass": "Player",
-					"sid": 858352749579514,
-					"parameters": {
-						"object": "Coin"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "add-to-instvar",
-					"objectClass": "Player",
-					"sid": 319343273537843,
-					"parameters": {
-						"instance-variable": "Coins",
-						"value": "1"
-					}
-				},
-				{
-					"id": "destroy",
-					"objectClass": "Coin",
-					"sid": 318078689272617
-				}
-			],
-			"sid": 967054825275112
 		},
 		{
 			"eventType": "block",

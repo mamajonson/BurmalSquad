@@ -30,6 +30,14 @@
 						"instance-variable": "CanGo",
 						"value": "0"
 					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "BlackScreen",
+					"sid": 463844898468792,
+					"parameters": {
+						"visibility": "invisible"
+					}
 				}
 			],
 			"sid": 782879169835847
@@ -99,18 +107,32 @@
 					],
 					"actions": [
 						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 944241190387075,
+							"id": "start-fade",
+							"objectClass": "BlackScreen",
+							"sid": 991763491339274,
+							"behaviorType": "Fade"
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "BlackScreen",
+							"sid": 504948911769976,
 							"parameters": {
-								"variable": "GlobalCoins",
-								"value": "0"
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 356060246935512,
+							"parameters": {
+								"seconds": "2",
+								"use-timescale": true
 							}
 						},
 						{
 							"id": "go-to-layout",
 							"objectClass": "System",
-							"sid": 302477750101476,
+							"sid": 544980037562192,
 							"parameters": {
 								"layout": "Arena"
 							}
