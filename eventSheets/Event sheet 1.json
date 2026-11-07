@@ -22,6 +22,16 @@
 			"sid": 558699325607020
 		},
 		{
+			"eventType": "variable",
+			"name": "WaveTimer",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 723482377339713
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -57,24 +67,6 @@
 					}
 				},
 				{
-					"id": "set-instvar-value",
-					"objectClass": "SpawnManager",
-					"sid": 462028203693969,
-					"parameters": {
-						"instance-variable": "EnemiesToSpawn",
-						"value": "GameData.Get(\"waves.\" & CurrentWave & \".enemies.0.count\")"
-					}
-				},
-				{
-					"id": "set-instvar-value",
-					"objectClass": "SpawnManager",
-					"sid": 502860357898456,
-					"parameters": {
-						"instance-variable": "SpawnInterval",
-						"value": "GameData.Get(\"waves.\" & CurrentWave & \".spawnInterval\")"
-					}
-				},
-				{
 					"id": "set-speed",
 					"objectClass": "Enemy1",
 					"sid": 598314876753633,
@@ -86,27 +78,19 @@
 				{
 					"id": "set-instvar-value",
 					"objectClass": "Player",
-					"sid": 307720207925336,
-					"parameters": {
-						"instance-variable": "ShotSpeed",
-						"value": "GameData.Get(\"waves.\" & CurrentWave & \".shotInterval\")"
-					}
-				},
-				{
-					"id": "set-text",
-					"objectClass": "Text",
-					"sid": 765970298600622,
-					"parameters": {
-						"text": "GameData.Get(\"waves.\" & CurrentWave & \".id\") & \" волна\""
-					}
-				},
-				{
-					"id": "set-instvar-value",
-					"objectClass": "Player",
 					"sid": 865708943967770,
 					"parameters": {
 						"instance-variable": "Coins",
 						"value": "GlobalCoins"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 250258597961113,
+					"parameters": {
+						"variable": "WaveTimer",
+						"value": "GameData.Get(\"waves.\" & CurrentWave & \".duration\")"
 					}
 				}
 			],
@@ -142,9 +126,9 @@
 				{
 					"id": "set-width",
 					"objectClass": "WaveLine",
-					"sid": 220918799545269,
+					"sid": 907316517874787,
 					"parameters": {
-						"width": "Player.KilledEnemies*(WaweLineBack.Width/SpawnManager.EnemiesToSpawn)"
+						"width": "WaweLineBack.Width * (WaveTimer / GameData.get(\"waves.\" & CurrentWave & \".duration\"))"
 					}
 				},
 				{
@@ -407,11 +391,11 @@
 				{
 					"id": "compare-two-values",
 					"objectClass": "System",
-					"sid": 473166498729699,
+					"sid": 907037309944348,
 					"parameters": {
-						"first-value": "SpawnManager.SpawnedCount",
-						"comparison": 2,
-						"second-value": "SpawnManager.EnemiesToSpawn"
+						"first-value": "WaveTimer",
+						"comparison": 4,
+						"second-value": "0"
 					}
 				}
 			],
@@ -504,11 +488,11 @@
 				{
 					"id": "compare-two-values",
 					"objectClass": "System",
-					"sid": 849972876459132,
+					"sid": 410081570205985,
 					"parameters": {
-						"first-value": "Player.KilledEnemies",
-						"comparison": 0,
-						"second-value": "SpawnManager.EnemiesToSpawn"
+						"first-value": "WaveTimer",
+						"comparison": 3,
+						"second-value": "0"
 					}
 				},
 				{
@@ -519,12 +503,11 @@
 			],
 			"actions": [
 				{
-					"id": "add-to-eventvar",
+					"id": "set-time-scale",
 					"objectClass": "System",
-					"sid": 607524215757347,
+					"sid": 558682461534876,
 					"parameters": {
-						"variable": "CurrentWave",
-						"value": "1"
+						"time-scale": "0"
 					}
 				},
 				{
@@ -544,11 +527,16 @@
 				{
 					"id": "wait",
 					"objectClass": "System",
-					"sid": 131600471007378,
+					"sid": 441495264666001,
 					"parameters": {
 						"seconds": "2.0",
-						"use-timescale": true
+						"use-timescale": false
 					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Enemy1",
+					"sid": 480457454997628
 				}
 			],
 			"sid": 434450138119113,
@@ -703,6 +691,67 @@
 			],
 			"actions": [
 				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 186092447169685,
+					"parameters": {
+						"variable": "CurrentWave",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-time-scale",
+					"objectClass": "System",
+					"sid": 272040158269310,
+					"parameters": {
+						"time-scale": "1.0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 275807454015319,
+					"parameters": {
+						"variable": "WaveTimer",
+						"value": "GameData.Get(\"waves.\" & CurrentWave & \".duration\")"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "Text",
+					"sid": 729728767655588,
+					"parameters": {
+						"text": "GameData.Get(\"waves.\" & CurrentWave & \".id\") & \" волна\""
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Player",
+					"sid": 617660583580176,
+					"parameters": {
+						"instance-variable": "ShotSpeed",
+						"value": "GameData.Get(\"waves.\" & CurrentWave & \".shotInterval\")"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "SpawnManager",
+					"sid": 337505001476428,
+					"parameters": {
+						"instance-variable": "EnemiesToSpawn",
+						"value": "GameData.Get(\"waves.\" & CurrentWave & \".enemies.0.count\")"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "SpawnManager",
+					"sid": 710921644226278,
+					"parameters": {
+						"instance-variable": "SpawnInterval",
+						"value": "GameData.Get(\"waves.\" & CurrentWave & \".spawnInterval\")"
+					}
+				},
+				{
 					"id": "set-eventvar-value",
 					"objectClass": "System",
 					"sid": 715110464881881,
@@ -712,11 +761,11 @@
 					}
 				},
 				{
-					"id": "go-to-layout",
-					"objectClass": "System",
-					"sid": 242683026478396,
+					"id": "set-visible",
+					"objectClass": "NextWaveButton",
+					"sid": 485867893588177,
 					"parameters": {
-						"layout": "Arena"
+						"visibility": "invisible"
 					}
 				}
 			],
@@ -751,6 +800,48 @@
 				}
 			],
 			"sid": 967054825275112
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 917491193831890
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 745529848649635,
+					"parameters": {
+						"first-value": "WaveTimer",
+						"comparison": 4,
+						"second-value": "0"
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 704807116807743,
+					"parameters": {
+						"first-value": "timescale",
+						"comparison": 0,
+						"second-value": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 595491302468963,
+					"parameters": {
+						"variable": "WaveTimer",
+						"value": "dt"
+					}
+				}
+			],
+			"sid": 495002918331475
 		}
 	],
 	"sid": 411087049602231
