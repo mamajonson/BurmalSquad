@@ -12,6 +12,16 @@
 			"sid": 167943412484617
 		},
 		{
+			"eventType": "variable",
+			"name": "GlobalCoins",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 558699325607020
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -40,48 +50,8 @@
 				},
 				{
 					"id": "set-visible",
-					"objectClass": "ResultBg",
-					"sid": 878018119358281,
-					"parameters": {
-						"visibility": "invisible"
-					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "ToMenuButton",
-					"sid": 104173582683148,
-					"parameters": {
-						"visibility": "invisible"
-					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "LevelUpText",
-					"sid": 343733108259844,
-					"parameters": {
-						"visibility": "invisible"
-					}
-				},
-				{
-					"id": "set-visible",
 					"objectClass": "NextWaveButton",
-					"sid": 317300692209971,
-					"parameters": {
-						"visibility": "invisible"
-					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "NexWaveText",
-					"sid": 902613122539168,
-					"parameters": {
-						"visibility": "invisible"
-					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "ToMenuText",
-					"sid": 636616612932640,
+					"sid": 878018119358281,
 					"parameters": {
 						"visibility": "invisible"
 					}
@@ -128,6 +98,15 @@
 					"sid": 765970298600622,
 					"parameters": {
 						"text": "GameData.Get(\"waves.\" & CurrentWave & \".id\") & \" волна\""
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Player",
+					"sid": 865708943967770,
+					"parameters": {
+						"instance-variable": "Coins",
+						"value": "GlobalCoins"
 					}
 				}
 			],
@@ -551,10 +530,10 @@
 				{
 					"id": "add-to-instvar",
 					"objectClass": "Player",
-					"sid": 225633210709776,
+					"sid": 858326141221150,
 					"parameters": {
 						"instance-variable": "Coins",
-						"value": "Coin.Count"
+						"value": "Coin.Count - 1"
 					}
 				},
 				{
@@ -591,48 +570,8 @@
 					"actions": [
 						{
 							"id": "set-visible",
-							"objectClass": "ResultBg",
-							"sid": 276975632387235,
-							"parameters": {
-								"visibility": "visible"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "ToMenuButton",
-							"sid": 930921060433205,
-							"parameters": {
-								"visibility": "visible"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "LevelUpText",
-							"sid": 894703532015054,
-							"parameters": {
-								"visibility": "visible"
-							}
-						},
-						{
-							"id": "set-visible",
 							"objectClass": "NextWaveButton",
 							"sid": 280987039105002,
-							"parameters": {
-								"visibility": "visible"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "NexWaveText",
-							"sid": 829720875028462,
-							"parameters": {
-								"visibility": "visible"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "ToMenuText",
-							"sid": 997361973148997,
 							"parameters": {
 								"visibility": "visible"
 							}
@@ -763,6 +702,15 @@
 				}
 			],
 			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 715110464881881,
+					"parameters": {
+						"variable": "GlobalCoins",
+						"value": "Player.Coins"
+					}
+				},
 				{
 					"id": "go-to-layout",
 					"objectClass": "System",

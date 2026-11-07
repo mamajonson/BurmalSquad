@@ -1,46 +1,46 @@
 {
-    "waves": [
+  "waves": [
+    {
+      "id": 1,
+      "shotInterval": 1.2,
+      "spawnInterval": 1,
+      "enemies": [
         {
-            "id": 1,
-            "shotInterval": 1.2,
-            "spawnInterval": 1,
-            "enemies": [
-                {
-                    "type": "mob1",
-                    "count": 20,
-                    "stats": {
-                        "speed": 120
-                    }
-                }
-            ]
-        },
-        {
-            "id": 2,
-            "shotInterval": 1,
-            "spawnInterval": 0.8,
-            "enemies": [
-                {
-                    "type": "mob1",
-                    "count": 30,
-                    "stats": {
-                        "speed": 300
-                    }
-                }
-            ]
-        },
-        {
-            "id": 3,
-            "shotInterval": 0.8,
-            "spawnInterval": 0.6,
-            "enemies": [
-                {
-                    "type": "mob1",
-                    "count": 50,
-                    "stats": {
-                        "speed": 400
-                    }
-                }
-            ]
+          "type": "mob1",
+          "count": 20,
+          "stats": {
+            "speed": 120
+          }
         }
-    ]
+      ]
+    },
+    {
+      "id": 2,
+      "shotInterval": 1,
+      "spawnInterval": 0.8,
+      "enemies": [
+        {
+          "type": "mob1",
+          "count": 30,
+          "stats": {
+            "speed": 300
+          }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "shotInterval": 0.8,
+      "spawnInterval": 0.6,
+      "enemies": [
+        {
+          "type": "mob1",
+          "count": 50,
+          "stats": {
+            "speed": 400
+          }
+        }
+      ]
+    }
+  ]
 }
