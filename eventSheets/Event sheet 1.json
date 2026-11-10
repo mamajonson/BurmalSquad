@@ -354,9 +354,41 @@
 			],
 			"actions": [
 				{
+					"id": "set-speed",
+					"objectClass": "Enemy1",
+					"sid": 625768002477039,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"speed": "0"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "Enemy1",
+					"sid": 740003818765583,
+					"parameters": {
+						"animation": "\"Dead\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 224536670257181,
+					"parameters": {
+						"seconds": "0.2",
+						"use-timescale": false
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Enemy1",
+					"sid": 164403158434683
+				},
+				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 365289136369984,
+					"sid": 144921041082691,
 					"parameters": {
 						"object-to-create": "Coin",
 						"layer": "0",
@@ -365,11 +397,6 @@
 						"create-hierarchy": false,
 						"template-name": "\"\""
 					}
-				},
-				{
-					"id": "destroy",
-					"objectClass": "Enemy1",
-					"sid": 125057554671131
 				}
 			],
 			"sid": 780761409841916
@@ -851,6 +878,16 @@
 						"comparison": 0,
 						"second-value": "1"
 					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 978296681783308,
+					"parameters": {
+						"first-value": "Player.KilledEnemies",
+						"comparison": 4,
+						"second-value": "0"
+					}
 				}
 			],
 			"actions": [
@@ -865,6 +902,56 @@
 				}
 			],
 			"sid": 495002918331475
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 628377721346416,
+					"parameters": {
+						"first-value": "Player.8Direction.Speed",
+						"comparison": 0,
+						"second-value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Player",
+					"sid": 609591366630763,
+					"parameters": {
+						"animation": "\"Staying\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 625332848304726
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-moving",
+					"objectClass": "Player",
+					"sid": 318544111108489,
+					"behaviorType": "8Direction"
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Player",
+					"sid": 197533537961890,
+					"parameters": {
+						"animation": "\"Moving\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 300578062969755
 		}
 	],
 	"sid": 411087049602231
