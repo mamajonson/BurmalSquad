@@ -32,6 +32,16 @@
 			"sid": 723482377339713
 		},
 		{
+			"eventType": "variable",
+			"name": "PlayerSetupId",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 804768505547415
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -78,10 +88,10 @@
 				{
 					"id": "set-instvar-value",
 					"objectClass": "Player",
-					"sid": 290466472329948,
+					"sid": 663108954599006,
 					"parameters": {
 						"instance-variable": "ShotSpeed",
-						"value": "GameData.Get(\"waves.\" & CurrentWave & \".shotInterval\")"
+						"value": "PlayerData.Get(\"upgrades.\" & PlayerSetupId & \".shootInterval\")"
 					}
 				},
 				{
@@ -469,6 +479,14 @@
 					"parameters": {
 						"time-scale": "0"
 					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "LevelUpText",
+					"sid": 741433028439988,
+					"parameters": {
+						"text": "\"Волна проиграна!\""
+					}
 				}
 			],
 			"sid": 205400284107853
@@ -709,14 +727,6 @@
 						}
 					],
 					"actions": [
-						{
-							"id": "set-visible",
-							"objectClass": "ResultBg",
-							"sid": 330610463522236,
-							"parameters": {
-								"visibility": "visible"
-							}
-						},
 						{
 							"id": "set-visible",
 							"objectClass": "ToMenuButton",

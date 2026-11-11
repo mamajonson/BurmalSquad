@@ -1,0 +1,14 @@
+{
+    "upgrades":[
+        {
+            "id": 0,
+            "name": "Базовая стрельба",
+            "shootInterval": 1.5
+        },
+        {
+            "id": 1,
+            "name": "Ускорение стрельбы!",
+            "shootInterval": 0.9
+        }
+    ]
+}

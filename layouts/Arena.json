@@ -1552,7 +1552,7 @@
 					"locked": false,
 					"world": {
 						"x": 925,
-						"y": 642,
+						"y": 662,
 						"width": 648,
 						"height": 360,
 						"originX": 0.5,
@@ -2268,8 +2268,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 888,
-						"y": 547,
+						"x": 927,
+						"y": 528,
 						"width": 2141,
 						"height": 1158,
 						"originX": 0.5,
@@ -2384,6 +2384,14 @@
 			"properties": {},
 			"uid": 45,
 			"sid": 663180987802815,
+			"tags": "",
+			"instanceVariables": {}
+		},
+		{
+			"type": "PlayerData",
+			"properties": {},
+			"uid": 51,
+			"sid": 364505158633168,
 			"tags": "",
 			"instanceVariables": {}
 		}

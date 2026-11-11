@@ -122,7 +122,8 @@
 			"NextWaveButton",
 			"NexWaveText",
 			"BlackScreen",
-			"IntroText"
+			"IntroText",
+			"PlayerData"
 		],
 		"subfolders": []
 	},
@@ -235,6 +236,14 @@
 					"name": "GameData.json",
 					"type": "application/json",
 					"sid": 793539839014184,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "PlayerUpgrades.json",
+					"type": "application/json",
+					"sid": 681737344594924,
 					"file-info": {
 						"purpose": "none"
 					}

@@ -23,6 +23,17 @@
 					}
 				},
 				{
+					"id": "request-project-file",
+					"objectClass": "GameLoader",
+					"sid": 110861646883250,
+					"parameters": {
+						"tag": "\"playerData\"",
+						"file": {
+							"path": "PlayerUpgrades.json"
+						}
+					}
+				},
+				{
 					"id": "set-instvar-value",
 					"objectClass": "StartBtn",
 					"sid": 511884199968182,
@@ -64,9 +75,9 @@
 					}
 				},
 				{
-					"id": "set-instvar-value",
+					"id": "add-to-instvar",
 					"objectClass": "StartBtn",
-					"sid": 726842254268822,
+					"sid": 391254661545606,
 					"parameters": {
 						"instance-variable": "CanGo",
 						"value": "1"
@@ -74,6 +85,39 @@
 				}
 			],
 			"sid": 352159748018280
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-completed",
+					"objectClass": "GameLoader",
+					"sid": 147195496386149,
+					"parameters": {
+						"tag": "\"playerData\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "parse",
+					"objectClass": "PlayerData",
+					"sid": 989499191202844,
+					"parameters": {
+						"data": "GameLoader.LastData"
+					}
+				},
+				{
+					"id": "add-to-instvar",
+					"objectClass": "StartBtn",
+					"sid": 801020390451886,
+					"parameters": {
+						"instance-variable": "CanGo",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 604670822629255
 		},
 		{
 			"eventType": "block",
@@ -97,11 +141,11 @@
 						{
 							"id": "compare-two-values",
 							"objectClass": "System",
-							"sid": 665100937358824,
+							"sid": 562906158898519,
 							"parameters": {
 								"first-value": "StartBtn.CanGo",
 								"comparison": 0,
-								"second-value": "1"
+								"second-value": "2"
 							}
 						}
 					],
