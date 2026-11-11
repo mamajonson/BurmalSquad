@@ -78,15 +78,6 @@
 				{
 					"id": "set-instvar-value",
 					"objectClass": "Player",
-					"sid": 865708943967770,
-					"parameters": {
-						"instance-variable": "Coins",
-						"value": "GlobalCoins"
-					}
-				},
-				{
-					"id": "set-instvar-value",
-					"objectClass": "Player",
 					"sid": 290466472329948,
 					"parameters": {
 						"instance-variable": "ShotSpeed",
@@ -168,9 +159,9 @@
 				{
 					"id": "set-text",
 					"objectClass": "Text2",
-					"sid": 353710039954194,
+					"sid": 811094206004933,
 					"parameters": {
-						"text": "Player.Coins"
+						"text": "GlobalCoins"
 					}
 				}
 			],
@@ -223,11 +214,11 @@
 			],
 			"actions": [
 				{
-					"id": "add-to-instvar",
-					"objectClass": "Player",
-					"sid": 922785346552630,
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 874749312510707,
 					"parameters": {
-						"instance-variable": "Coins",
+						"variable": "GlobalCoins",
 						"value": "1"
 					}
 				},
@@ -350,6 +341,11 @@
 						"comparison": 0,
 						"value": "0"
 					}
+				},
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 692643272329618
 				}
 			],
 			"actions": [
@@ -374,7 +370,7 @@
 				{
 					"id": "wait",
 					"objectClass": "System",
-					"sid": 224536670257181,
+					"sid": 105555353493859,
 					"parameters": {
 						"seconds": "0.2",
 						"use-timescale": false
@@ -388,7 +384,7 @@
 				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 144921041082691,
+					"sid": 936275112496050,
 					"parameters": {
 						"object-to-create": "Coin",
 						"layer": "0",
@@ -603,6 +599,14 @@
 			],
 			"actions": [
 				{
+					"id": "set-time-scale",
+					"objectClass": "System",
+					"sid": 782328766239746,
+					"parameters": {
+						"time-scale": "0"
+					}
+				},
+				{
 					"id": "destroy",
 					"objectClass": "bullet",
 					"sid": 213968822249459
@@ -622,12 +626,21 @@
 					}
 				},
 				{
-					"id": "add-to-instvar",
-					"objectClass": "Player",
-					"sid": 557733255056985,
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 609793844044502,
 					"parameters": {
-						"instance-variable": "Coins",
+						"variable": "GlobalCoins",
 						"value": "Coin.Count"
+					}
+				},
+				{
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 639980800410266,
+					"parameters": {
+						"variable": "GlobalCoins",
+						"value": "1"
 					}
 				},
 				{
@@ -636,37 +649,11 @@
 					"sid": 801056277787110
 				},
 				{
-					"id": "subtract-from-instvar",
-					"objectClass": "Player",
-					"sid": 590145849990778,
-					"parameters": {
-						"instance-variable": "Coins",
-						"value": "1"
-					}
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 876643850419820,
-					"parameters": {
-						"variable": "GlobalCoins",
-						"value": "Player.Coins"
-					}
-				},
-				{
-					"id": "set-time-scale",
-					"objectClass": "System",
-					"sid": 558682461534876,
-					"parameters": {
-						"time-scale": "0"
-					}
-				},
-				{
 					"id": "wait",
 					"objectClass": "System",
-					"sid": 441495264666001,
+					"sid": 894070750677959,
 					"parameters": {
-						"seconds": "2.0",
+						"seconds": "0.2",
 						"use-timescale": false
 					}
 				}
@@ -768,6 +755,14 @@
 							"sid": 720669252461201,
 							"parameters": {
 								"variable": "CurrentWave"
+							}
+						},
+						{
+							"id": "reset-eventvar",
+							"objectClass": "System",
+							"sid": 305985087674773,
+							"parameters": {
+								"variable": "GlobalCoins"
 							}
 						}
 					],

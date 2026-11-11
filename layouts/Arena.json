@@ -55,13 +55,12 @@
 					"instanceVariables": {
 						"Lives": 3,
 						"KilledEnemies": 0,
-						"Coins": 0,
 						"ShotSpeed": 1
 					},
 					"behaviors": {
 						"8Direction": {
 							"properties": {
-								"max-speed": 200,
+								"max-speed": 230,
 								"acceleration": 600,
 								"deceleration": 1000,
 								"directions": "dir-8",
@@ -1798,8 +1797,8 @@
 				{
 					"type": "WaveLine",
 					"properties": {
-						"left-margin": 9,
-						"right-margin": 9,
+						"left-margin": 5,
+						"right-margin": 5,
 						"top-margin": 13,
 						"bottom-margin": 13,
 						"edges": "stretch",
@@ -1852,7 +1851,7 @@
 					"world": {
 						"x": 726.4398679351227,
 						"y": 79,
-						"width": 499.49797856698797,
+						"width": 499.5499645184376,
 						"height": 30,
 						"originX": 0,
 						"originY": 0,
@@ -1996,8 +1995,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 2694,
-						"y": -141,
+						"x": 2739,
+						"y": -130,
 						"width": 70,
 						"height": 70,
 						"originX": 0.5,
@@ -2269,8 +2268,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 925,
-						"y": 539,
+						"x": 888,
+						"y": 547,
 						"width": 2141,
 						"height": 1158,
 						"originX": 0.5,
