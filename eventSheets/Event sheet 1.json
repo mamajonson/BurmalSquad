@@ -360,33 +360,6 @@
 			],
 			"actions": [
 				{
-					"id": "set-speed",
-					"objectClass": "Enemy1",
-					"sid": 625768002477039,
-					"behaviorType": "Bullet",
-					"parameters": {
-						"speed": "0"
-					}
-				},
-				{
-					"id": "set-animation",
-					"objectClass": "Enemy1",
-					"sid": 740003818765583,
-					"parameters": {
-						"animation": "\"Dead\"",
-						"from": "beginning"
-					}
-				},
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 105555353493859,
-					"parameters": {
-						"seconds": "0.2",
-						"use-timescale": false
-					}
-				},
-				{
 					"id": "destroy",
 					"objectClass": "Enemy1",
 					"sid": 164403158434683
@@ -934,29 +907,6 @@
 				}
 			],
 			"sid": 625332848304726
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "is-moving",
-					"objectClass": "Player",
-					"sid": 318544111108489,
-					"behaviorType": "8Direction"
-				}
-			],
-			"actions": [
-				{
-					"id": "set-animation",
-					"objectClass": "Player",
-					"sid": 197533537961890,
-					"parameters": {
-						"animation": "\"Moving\"",
-						"from": "beginning"
-					}
-				}
-			],
-			"sid": 300578062969755
 		}
 	],
 	"sid": 411087049602231
