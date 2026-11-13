@@ -107,9 +107,7 @@
 			"WaweLineBack",
 			"Text",
 			"ResultBg",
-			"LevelUpText",
 			"ToMenuButton",
-			"ToMenuText",
 			"Touch",
 			"Arena",
 			"WaveLine",
@@ -120,18 +118,26 @@
 			"GameLoader",
 			"GameData",
 			"NextWaveButton",
-			"NexWaveText",
 			"BlackScreen",
 			"IntroText",
 			"PlayerData",
 			"SettingsBtn",
-			"Sprite"
+			"Sprite",
+			"ShopSlot",
+			"BuyButton"
 		],
 		"subfolders": []
 	},
 	"functionsName": "Functions",
 	"autosaveData": null,
-	"containers": [],
+	"containers": [
+		{
+			"members": [
+				"BuyButton",
+				"ShopSlot"
+			]
+		}
+	],
 	"families": {
 		"items": [],
 		"subfolders": []

@@ -430,35 +430,11 @@
 					}
 				},
 				{
-					"id": "set-visible",
-					"objectClass": "LevelUpText",
-					"sid": 654742943399646,
-					"parameters": {
-						"visibility": "visible"
-					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "ToMenuText",
-					"sid": 652651732709645,
-					"parameters": {
-						"visibility": "visible"
-					}
-				},
-				{
 					"id": "set-time-scale",
 					"objectClass": "System",
 					"sid": 193341302644823,
 					"parameters": {
 						"time-scale": "0"
-					}
-				},
-				{
-					"id": "set-text",
-					"objectClass": "LevelUpText",
-					"sid": 741433028439988,
-					"parameters": {
-						"text": "\"Волна проиграна!\""
 					}
 				}
 			],
@@ -704,22 +680,6 @@
 							"id": "set-visible",
 							"objectClass": "ToMenuButton",
 							"sid": 495270730372922,
-							"parameters": {
-								"visibility": "visible"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "LevelUpText",
-							"sid": 733006518564196,
-							"parameters": {
-								"visibility": "visible"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "ToMenuText",
-							"sid": 641461052320435,
 							"parameters": {
 								"visibility": "visible"
 							}
