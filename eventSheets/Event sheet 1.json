@@ -868,6 +868,15 @@
 						},
 						{
 							"id": "set-instvar-value",
+							"objectClass": "Enemy1",
+							"sid": 571014502034197,
+							"parameters": {
+								"instance-variable": "Type",
+								"value": "floor(random(100)) < GameData.Get(\"waves.\" & CurrentWave & \".enemy2Chance\") ? 1 : 0"
+							}
+						},
+						{
+							"id": "set-instvar-value",
 							"objectClass": "SpawnManager",
 							"sid": 762203704308521,
 							"parameters": {
@@ -877,6 +886,50 @@
 						}
 					],
 					"sid": 180658726744525
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-last-created",
+							"objectClass": "System",
+							"sid": 440442698574016,
+							"parameters": {
+								"object": "Enemy1"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Enemy1",
+							"sid": 231337452365258,
+							"parameters": {
+								"instance-variable": "Type",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Enemy1",
+							"sid": 754804982696895,
+							"parameters": {
+								"animation": "\"EnemyType2\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "add-to-instvar",
+							"objectClass": "Enemy1",
+							"sid": 459977477133167,
+							"parameters": {
+								"instance-variable": "HP",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 678183681188872
 				}
 			]
 		},

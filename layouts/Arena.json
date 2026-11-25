@@ -157,7 +157,8 @@
 					"tags": "",
 					"instanceVariables": {
 						"HP": 1,
-						"Targeted": false
+						"Targeted": false,
+						"Type": 0
 					},
 					"behaviors": {
 						"Bullet": {

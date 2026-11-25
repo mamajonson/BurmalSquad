@@ -5,6 +5,7 @@
       "duration": 15,
       "shotInterval": 1.2,
       "spawnInterval": 1.2,
+      "enemy2Chance": 0,
       "enemies": [
         {
           "type": "mob1",
@@ -19,6 +20,7 @@
       "duration": 40,
       "shotInterval": 0.9,
       "spawnInterval": 1,
+      "enemy2Chance": 20,
       "enemies": [
         {
           "type": "mob1",
@@ -33,6 +35,7 @@
       "duration": 40,
       "shotInterval": 0.8,
       "spawnInterval": 0.8,
+      "enemy2Chance": 40,
       "enemies": [
         {
           "type": "mob1",
@@ -43,10 +46,11 @@
       ]
     },
     {
-      "id": 3,
+      "id": 4,
       "duration": 3,
       "shotInterval": 0.8,
       "spawnInterval": 0.8,
+      "enemy2Chance": 60,
       "enemies": [
         {
           "type": "mob1",
@@ -57,10 +61,11 @@
       ]
     },
     {
-      "id": 3,
+      "id": 5,
       "duration": 3,
       "shotInterval": 0.8,
       "spawnInterval": 0.8,
+      "enemy2Chance": 80,
       "enemies": [
         {
           "type": "mob1",
@@ -71,28 +76,27 @@
       ]
     }
   ],
-  "sputniki":
-  [
+  "sputniki": [
     {
-        "id": "zhuzhik",
-        "name": "Жужик",
-        "price": 5,
-        "iconFrame": 0,
-        "behavior": "single_target"
+      "id": "zhuzhik",
+      "name": "Жужик",
+      "price": 5,
+      "iconFrame": 0,
+      "behavior": "single_target"
     },
     {
-        "id": "zaika",
-        "name": "Зайка",
-        "price": 10,
-        "iconFrame": 1,
-        "behavior": "support"
+      "id": "zaika",
+      "name": "Зайка",
+      "price": 10,
+      "iconFrame": 1,
+      "behavior": "support"
     },
     {
-        "id": "tomato",
-        "name": "Томат",
-        "price": 15,
-        "iconFrame": 2,
-        "behavior": "area_attack"
+      "id": "tomato",
+      "name": "Томат",
+      "price": 15,
+      "iconFrame": 2,
+      "behavior": "area_attack"
     }
   ]
 }

@@ -18,6 +18,13 @@
 			"desc": "",
 			"show": true,
 			"sid": 543265456792721
+		},
+		{
+			"name": "Type",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 968737721894949
 		}
 	],
 	"behaviorTypes": [
@@ -86,6 +93,59 @@
 				],
 				"sid": 181830706105071,
 				"name": "Dead",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 143,
+						"height": 195,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 8070991,
+						"collisionPoly": {
+							"points": [
+								0.3706293706293706,
+								0,
+								0.45454545454545453,
+								0,
+								0.7552447552447552,
+								0.046153846153846156,
+								0.8811188811188811,
+								0.09230769230769231,
+								0.951048951048951,
+								0.18461538461538463,
+								0.951048951048951,
+								0.8923076923076924,
+								0.9020979020979021,
+								1,
+								0.7342657342657343,
+								1,
+								0.3706293706293706,
+								0.9846153846153847,
+								0.03496503496503497,
+								0.7538461538461538,
+								0.03496503496503497,
+								0.18974358974358974,
+								0.13286713286713286,
+								0.02564102564102564
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 179540531801907,
+				"name": "EnemyType2",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,
